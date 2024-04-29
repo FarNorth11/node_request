@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get From</title>
+    <script>
+        //正则
+        var str = 'sdfasdhellofasdffghsfgh';
+        var re = /hello/;
+        //  /h...o/ 匹配中间有三个字符的,h开头,o结尾
+        //  /h.{1,}o/i 匹配中间至少含有一个字符,h开头,o结尾
+//        window.onload = function(){
+//            if(re.test((str))){
+//                alert('含有');
+//            }else{
+//                alert("没有");
+//            }
+//        }
+    </script>
+</head>
+<body>
+<!--<form action="./getForm" method="get">-->
+    <!--<div> get </div>-->
+    <!--<table align="center">-->
+        <!--<tr>-->
+            <!--<td>email:</td>-->
+            <!--<td><input type="text" name="email"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>密码:</td>-->
+            <!--<td><input type="password" name="pwd"/></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td align="center"><input type="submit" value="登录"/></td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+<!--</form>-->
+<br/>
+收到参数:email是{email}<br/>
+密码是:{pwd}
+<form action="./getForm" method="post">
+    <div> post </div>
+    <table align="center">
+        <tr>
+            <td>email:</td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="pwd"/></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="submit" value="登录"/></td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>
