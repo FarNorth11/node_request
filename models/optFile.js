@@ -1,3 +1,11 @@
+/*
+ * @Author: kalen peichenkai11@gmail.com
+ * @Date: 2024-04-29 15:04:53
+ * @LastEditors: kalen peichenkai11@gmail.com
+ * @LastEditTime: 2024-04-29 18:12:11
+ * @FilePath: /node_request/models/optFile.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 /**
  * Created by ben on 2019/1/29.
  */
@@ -12,17 +20,17 @@ module.exports={
                 console.log('readFileAsync:',error);
                 recall(error.toString());
             }else{
-                //console.log(data.toString());
+                console.log(data.toString());
                 //闭包函数
                 recall(data);
             }
         });
-        //console.log('异步方法执行完毕');
+        console.log('异步方法执行完毕');
     },
     //同步读取方法
     readFileSync:function(path){
         var data = fs.readFileSync(path,'utf-8');
-        //console.log(data.toString());
+        console.log(data.toString());
         console.log('同步方法执行完毕');
     },
     //异步写文件

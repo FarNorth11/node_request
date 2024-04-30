@@ -1,9 +1,18 @@
+/*
+ * @Author: kalen peichenkai11@gmail.com
+ * @Date: 2024-04-29 15:04:53
+ * @LastEditors: kalen peichenkai11@gmail.com
+ * @LastEditTime: 2024-04-30 11:33:40
+ * @FilePath: /node_request/router.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 var optFile = require("./models/optFile");
 var http = require('http');
 var url = require('url');
 var querystring = require('querystring');
 function  getRecall(request,response){
-	response.writeHead(200, { 'Content-Type': 'text/html; charset = utf-8' });
+	// response.writeHead(200, { 'Content-Type': 'text/html; charset = utf-8' });
+	response.writeHead(200, { 'Content-Type': 'text/html' });
 	function recall(data){
 		response.write(data);
 		response.end('');
@@ -15,7 +24,7 @@ module.exports={
 		//response.write("我是login方法");
 		//闭包.A 异步读取文件,需要保留reqeust对象
 		//function recall(data){
-		//    response.write(data);
+		//    response.write(data); 
 		//    response.end('');
 		//}
 
@@ -25,7 +34,7 @@ module.exports={
 	},
 	regist:function(request,response){
 		//异步读取文件
-		response.write('my regist method!');
+		// response.write('my regist method!');
 		recall = getRecall(request,response);
 		optFile.readFileAsync('./models/view/regist.html',recall);
 	},
@@ -45,7 +54,7 @@ module.exports={
 	showImg: function (request,response) {
 		//异步读取图片,以二进制编码的形式,发送到网页上
 		response.writeHead(200, { 'Content-Type': 'image/jpeg' });
-		optFile.readImg('./img/pig.jpg',response);
+		optFile.readImg('./img/view.jpg',response);
 	},
 	getForm: function (request,response) {
 
